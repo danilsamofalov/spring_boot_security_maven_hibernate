@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Новый пользователь</title>
+</head>
+<body>
+<form th:method="POST" th:action="@{/admin}" th:object="${user}">
+    <label for="username">Name</label>
+    <input type="text" th:field="*{username}" id="username"/>
+    <br/>
+    <label for="password">Password</label>
+    <input type="text" th:field="*{password}" id="password"/>
+    <br/>
+    <label for="salary">Salary</label>
+    <input type="text" th:field="*{salary}" id="salary"/>
+    <br/>
+    <input type="submit" value="Create!"/>
+</form>
+<br/>
+<hr/>
+
+<a href="/admin">К пользователям</a>
+<br/>
+
+<a href="/logout">Logout</a>
+</body>
+</html>
