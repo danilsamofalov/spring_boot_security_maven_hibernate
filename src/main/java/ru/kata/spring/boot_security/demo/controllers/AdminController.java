@@ -18,7 +18,7 @@ import ru.kata.spring.boot_security.demo.services.UserService;
 @RequestMapping("/admin")
 public class AdminController {
 
-    private UserService userService;
+    private final UserService userService;
 
     public AdminController(UserService userService) {
         this.userService = userService;
